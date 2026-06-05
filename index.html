@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdul Azeem — Sr. Software Engineer</title>
+<meta name="description" content="Fullstack Software Engineer based in Germany.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+<style>
+  :root {
+    --npm-bg: #fbfbfb;
+    --npm-surface: #fff;
+    --npm-border: #e8e8e8;
+    --npm-text: #333;
+    --npm-text2: #666;
+    --npm-text3: #999;
+    --npm-red: #cb3837;
+    --npm-red-dark: #b52e2d;
+    --npm-link: #196cb2;
+    --npm-tag-bg: #f2f2f2;
+    --npm-sidebar-bg: #fafafa;
+    --npm-code-bg: #282c34;
+    --npm-code-text: #abb2bf;
+    --max-w: 1140px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Fira Mono", "Source Code Pro", Menlo, monospace; background: var(--npm-bg); color: var(--npm-text); line-height: 1.6; font-size: 15px; }
+
+  /* ── Top bar (npm-style) ──────────────────────────────── */
+  .topbar { background: var(--npm-red); padding: 0; height: 48px; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; }
+  .topbar-left { display: flex; align-items: center; gap: 16px; }
+  .topbar-logo { font-size: 20px; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: -0.5px; }
+  .topbar-logo span { opacity: 0.7; font-weight: 400; }
+  .lang-switch { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 4px 14px; border-radius: 4px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; transition: background 0.2s; }
+  .lang-switch:hover { background: rgba(255,255,255,0.25); }
+
+  /* ── Nav ───────────────────────────────────────────────── */
+  .nav { background: var(--npm-surface); border-bottom: 1px solid var(--npm-border); }
+  .nav-inner { max-width: var(--max-w); margin: 0 auto; display: flex; gap: 0; overflow-x: auto; }
+  .nav a { padding: 12px 20px; font-size: 14px; color: var(--npm-text2); text-decoration: none; border-bottom: 3px solid transparent; transition: all 0.15s; white-space: nowrap; }
+  .nav a:hover, .nav a.active { color: var(--npm-text); border-bottom-color: var(--npm-red); }
+
+  /* ── Layout ────────────────────────────────────────────── */
+  .container { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 280px; gap: 32px; padding: 28px 24px; }
+  @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+
+  /* ── Main ──────────────────────────────────────────────── */
+  .main h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .main h1 .version { font-size: 14px; font-weight: 400; color: var(--npm-text3); }
+  .location-line { font-size: 13px; color: var(--npm-text3); margin-bottom: 20px; }
+  .location-line svg { width: 13px; height: 13px; vertical-align: -1px; margin-right: 3px; }
+
+  /* Install box */
+  .install-box { background: var(--npm-code-bg); color: var(--npm-code-text); padding: 14px 18px; border-radius: 6px; font-size: 14px; margin-bottom: 28px; display: flex; align-items: center; justify-content: space-between; }
+  .install-box code { color: #e5c07b; }
+  .install-box .copy-btn { background: none; border: 1px solid #555; color: #aaa; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 12px; font-family: inherit; }
+  .install-box .copy-btn:hover { border-color: #888; color: #ddd; }
+
+  /* Sections */
+  .section { margin-bottom: 28px; }
+  .section h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--npm-border); }
+  .section h2 a.anchor { color: var(--npm-link); text-decoration: none; margin-right: 6px; opacity: 0; transition: opacity 0.15s; }
+  .section:hover h2 a.anchor { opacity: 1; }
+  .section p { color: var(--npm-text2); }
+
+  /* Skills / keywords (npm tag style) */
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { background: var(--npm-tag-bg); color: var(--npm-link); font-size: 13px; padding: 4px 12px; border-radius: 4px; text-decoration: none; transition: background 0.15s; }
+  .tag:hover { background: #e6e6e6; }
+
+  /* Experience */
+  .exp-item { padding: 14px 0; border-bottom: 1px solid var(--npm-border); }
+  .exp-item:last-child { border-bottom: none; }
+  .exp-title { font-weight: 700; font-size: 15px; }
+  .exp-company { color: var(--npm-link); font-size: 14px; }
+  .exp-meta { font-size: 13px; color: var(--npm-text3); margin-top: 2px; }
+
+  /* Languages table */
+  .lang-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .lang-table th, .lang-table td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--npm-border); }
+  .lang-table th { font-weight: 600; color: var(--npm-text2); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .lang-table td:first-child { font-weight: 600; }
+  .level-badge { display: inline-block; padding: 1px 8px; border-radius: 3px; font-size: 12px; font-weight: 600; }
+  .level-native { background: #e8f5e9; color: #2e7d32; }
+  .level-c { background: #e3f2fd; color: #1565c0; }
+  .level-b { background: #fff3e0; color: #e65100; }
+  .level-a { background: #fce4ec; color: #c62828; }
+
+  /* Interests */
+  .interests { display: flex; flex-wrap: wrap; gap: 8px; }
+  .interest { background: var(--npm-surface); border: 1px solid var(--npm-border); padding: 5px 14px; border-radius: 20px; font-size: 13px; color: var(--npm-text2); }
+
+  /* ── Sidebar ───────────────────────────────────────────── */
+  .sidebar { font-size: 14px; }
+  .sidebar-section { margin-bottom: 20px; }
+  .sidebar-section h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--npm-text3); margin-bottom: 6px; font-weight: 600; }
+  .sidebar-section .val { font-weight: 600; color: var(--npm-text); }
+  .sidebar-section a { color: var(--npm-link); text-decoration: none; }
+  .sidebar-section a:hover { text-decoration: underline; }
+  .sidebar-section .icon-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+  .sidebar-section .icon-row svg { width: 16px; height: 16px; flex-shrink: 0; color: var(--npm-text3); }
+
+  /* ── Footer ────────────────────────────────────────────── */
+  .footer { background: var(--npm-surface); border-top: 1px solid var(--npm-border); padding: 20px 24px; text-align: center; font-size: 13px; color: var(--npm-text3); margin-top: 40px; }
+
+  /* ── Responsive ─────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .container { padding: 20px 16px; }
+    .main h1 { font-size: 22px; }
+    .nav-inner { padding: 0 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="topbar-left">
+    <a class="topbar-logo" href="#">aa <span>/ cv</span></a>
+  </div>
+  <button class="lang-switch" id="langSwitch" onclick="toggleLang()">DE</button>
+</div>
+
+<!-- Nav -->
+<div class="nav">
+  <div class="nav-inner" id="navLinks">
+    <a href="#about" class="active" data-key="nav.experience">Experience</a>
+    <a href="#skills" data-key="nav.skills">Skills</a>
+    <a href="#education" data-key="nav.education">Education</a>
+    <a href="#languages" data-key="nav.languages">Languages</a>
+    <a href="#contact" data-key="nav.contact">Contact</a>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="container">
+
+  <!-- Main column -->
+  <div class="main">
+
+    <h1 id="nameHeading">Abdul Azeem <span class="version" id="versionBadge">v6.0.0</span></h1>
+    <p class="location-line" id="locationLine">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Konstanz, Baden-Württemberg, Germany
+    </p>
+
+    <!-- Install box -->
+    <div class="install-box">
+      <div><span style="color:#999" data-key="sections.install">Install</span>&nbsp;&nbsp;<code id="installCmd">npx hire abdulazeem</code></div>
+      <button class="copy-btn" onclick="navigator.clipboard.writeText('npx hire abdulazeem')">📋</button>
+    </div>
+
+    <!-- About -->
+    <div class="section" id="about">
+      <h2><a class="anchor" href="#about">#</a> <span data-key="sections.about">About</span></h2>
+      <p data-key="sections.aboutText">Fullstack software engineer with 7+ years of experience…</p>
+    </div>
+
+    <!-- Experience -->
+    <div class="section" id="experience">
+      <h2><a class="anchor" href="#experience">#</a> <span data-key="sections.experience">Experience</span></h2>
+      <div id="expList"></div>
+    </div>
+
+    <!-- Skills -->
+    <div class="section" id="skills">
+      <h2><a class="anchor" href="#skills">#</a> <span data-key="sections.skills">Skills</span></h2>
+      <div class="tags" id="skillTags"></div>
+    </div>
+
+    <!-- Education -->
+    <div class="section" id="education">
+      <h2><a class="anchor" href="#education">#</a> <span data-key="sections.education">Education</span></h2>
+      <div id="eduContent"></div>
+    </div>
+
+    <!-- Languages -->
+    <div class="section" id="languages">
+      <h2><a class="anchor" href="#languages">#</a> <span data-key="sections.languages">Languages</span></h2>
+      <table class="lang-table" id="langTable"></table>
+    </div>
+
+    <!-- Interests -->
+    <div class="section" id="interests-section">
+      <h2><a class="anchor" href="#interests-section">#</a> <span data-key="sections.interests">Interests</span></h2>
+      <div class="interests" id="interestList"></div>
+    </div>
+
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="contact">
+
+    <div class="sidebar-section">
+      <h3 data-key="sections.contact">Contact</h3>
+      <div class="icon-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a id="emailLink" href="mailto:azsidhu8@gmail.com">azsidhu8@gmail.com</a>
+      </div>
+      <div class="icon-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.6.68 2.36a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.76.32 1.55.55 2.36.68A2 2 0 0122 16.92z"/></svg>
+        <span id="phoneVal">+49 174 7082325</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h3 data-key="sections.repository">Repository</h3>
+      <div class="icon-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        <a id="githubLink" href="https://github.com/iabdulazeem/" target="_blank" rel="noopener">github.com/iabdulazeem</a>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>LinkedIn</h3>
+      <div class="icon-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <a id="linkedinLink" href="https://www.linkedin.com/in/abdulazeem1/" target="_blank" rel="noopener">linkedin.com/in/abdulazeem1</a>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h3 data-key="sections.homepage">Homepage</h3>
+      <div class="icon-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        <a id="addressVal" href="#">Konstanz, BW, Germany</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  Built with HTML, CSS & vanilla JS · Inspired by <a href="https://www.npmjs.com" style="color:var(--npm-red);text-decoration:none">npm</a>
+</div>
+
+<script>
+const LOCALES = {};
+let currentLang = 'en';
+
+async function loadLocale(lang) {
+  if (!LOCALES[lang]) {
+    const res = await fetch(`locales/${lang}.json`);
+    LOCALES[lang] = await res.json();
+  }
+  return LOCALES[lang];
+}
+
+function applyLocale(data) {
+  // Update page title
+  document.title = data.meta.title;
+  document.documentElement.lang = data.meta.lang;
+
+  // Update all [data-key] elements
+  document.querySelectorAll('[data-key]').forEach(el => {
+    const keys = el.dataset.key.split('.');
+    let val = data;
+    for (const k of keys) val = val?.[k];
+    if (val) el.textContent = val;
+  });
+
+  // Header
+  document.getElementById('nameHeading').innerHTML =
+    `${data.header.name} <span class="version">${data.header.version}</span>`;
+  document.getElementById('locationLine').innerHTML =
+    `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> ${data.header.location}`;
+  document.getElementById('langSwitch').textContent = data.header.switchLang;
+
+  // Install
+  document.getElementById('installCmd').textContent = data.sections.installCmd;
+
+  // Experience
+  const expHtml = data.experience.map(e => `
+    <div class="exp-item">
+      <div class="exp-title">${e.title}</div>
+      <div class="exp-company">${e.company}</div>
+      <div class="exp-meta">${e.location} · ${e.start} — ${e.end}</div>
+    </div>`).join('');
+  document.getElementById('expList').innerHTML = expHtml;
+
+  // Skills
+  document.getElementById('skillTags').innerHTML =
+    data.skills.map(s => `<span class="tag">${s}</span>`).join('');
+
+  // Education
+  document.getElementById('eduContent').innerHTML = `
+    <div class="exp-item" style="border:none">
+      <div class="exp-title">${data.education.degree}</div>
+      <div class="exp-company"><a href="${data.education.website}" target="_blank" rel="noopener">${data.education.university}</a></div>
+    </div>`;
+
+  // Languages
+  const langs = data.languages;
+  const hdr = `<tr><th></th><th>${data.sections.listening}</th><th>${data.sections.reading}</th><th>${data.sections.spokenProduction}</th><th>${data.sections.spokenInteraction}</th><th>${data.sections.writing}</th></tr>`;
+  let rows = '';
+  for (const [name, info] of Object.entries(langs)) {
+    if (info.level) {
+      rows += `<tr><td>${name}</td><td colspan="5"><span class="level-badge level-native">${info.level}</span></td></tr>`;
+    } else {
+      rows += `<tr><td>${name}</td>
+        <td><span class="level-badge level-${info.listening[0].toLowerCase()}">${info.listening}</span></td>
+        <td><span class="level-badge level-${info.reading[0].toLowerCase()}">${info.reading}</span></td>
+        <td><span class="level-badge level-${info.spokenProduction[0].toLowerCase()}">${info.spokenProduction}</span></td>
+        <td><span class="level-badge level-${info.spokenInteraction[0].toLowerCase()}">${info.spokenInteraction}</span></td>
+        <td><span class="level-badge level-${info.writing[0].toLowerCase()}">${info.writing}</span></td>
+      </tr>`;
+    }
+  }
+  document.getElementById('langTable').innerHTML = hdr + rows;
+
+  // Interests
+  document.getElementById('interestList').innerHTML =
+    data.interests.map(i => `<span class="interest">${i}</span>`).join('');
+
+  // Sidebar
+  document.getElementById('emailLink').textContent = data.info.email;
+  document.getElementById('emailLink').href = `mailto:${data.info.email}`;
+  document.getElementById('phoneVal').textContent = data.info.phone;
+  document.getElementById('addressVal').textContent = data.header.location;
+}
+
+async function setLang(lang) {
+  currentLang = lang;
+  const data = await loadLocale(lang);
+  applyLocale(data);
+  // Update URL hash
+  history.replaceState(null, '', `/${lang}${location.search}`);
+}
+
+function toggleLang() {
+  setLang(currentLang === 'en' ? 'de' : 'en');
+}
+
+// Init
+(async () => {
+  // Detect lang from URL path
+  const path = location.pathname;
+  const lang = path.includes('/de') ? 'de' : 'en';
+  await setLang(lang);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "lang": "de",
+    "title": "Abdul Azeem — Sr. Softwareentwickler",
+    "description": "Fullstack-Softwareentwickler in Deutschland. TypeScript, React, Python, GCP, KI-Integrationen."
+  },
+  "nav": {
+    "experience": "Erfahrung",
+    "skills": "Kenntnisse",
+    "education": "Ausbildung",
+    "languages": "Sprachen",
+    "contact": "Kontakt"
+  },
+  "header": {
+    "name": "Abdul Azeem",
+    "tagline": "Sr. Softwareentwickler",
+    "version": "v6.0.0",
+    "location": "Konstanz, Baden-Württemberg, Deutschland",
+    "switchLang": "EN"
+  },
+  "sections": {
+    "install": "Installieren",
+    "installCmd": "npx hire abdulazeem",
+    "about": "Über mich",
+    "aboutText": "Fullstack-Softwareentwickler mit über 7 Jahren Erfahrung in der Entwicklung skalierbarer Webanwendungen, KI-gestützter Integrationen und cloudnativer Systeme. Derzeit an KI-Produkten bei 1alpha AI in München tätig. Zuvor Carbon-Credit-Plattformen, Echtzeit-Coaching-Systeme und Enterprise-SaaS-Produkte in Deutschland und den USA entwickelt.",
+    "experience": "Erfahrung",
+    "skills": "Kenntnisse",
+    "education": "Ausbildung",
+    "languages": "Sprachen",
+    "interests": "Interessen",
+    "contact": "Kontakt",
+    "repository": "Repository",
+    "homepage": "Webseite",
+    "current": "Aktuell",
+    "present": "Aktuell",
+    "motherTongue": "Muttersprache",
+    "listening": "Hören",
+    "reading": "Lesen",
+    "spokenProduction": "Zusammenhängendes Sprechen",
+    "spokenInteraction": "An Gesprächen teilnehmen",
+    "writing": "Schreiben"
+  },
+  "info": {
+    "name": "Abdul Azeem",
+    "phone": "+49 174 7082325",
+    "email": "azsidhu8@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/abdulazeem1/",
+    "github": "https://github.com/iabdulazeem/",
+    "address": "Konstanz, Baden-Württemberg, Deutschland"
+  },
+  "skills": [
+    "TypeScript", "JavaScript", "Python", "Go", "HTML", "CSS",
+    "ReactJS", "Django",
+    "LLM APIs", "KI-gestützte Integrationen",
+    "Google Cloud Platform (GCP)", "Docker", "Terraform", "CI/CD",
+    "PostgreSQL", "ORM", "GraphQL",
+    "Event-Driven Architecture", "Material Design"
+  ],
+  "experience": [
+    {
+      "title": "Sr. Softwareentwickler",
+      "company": "1alpha AI",
+      "location": "München, Deutschland",
+      "start": "Jul 2025",
+      "end": "Aktuell"
+    },
+    {
+      "title": "Softwareentwickler",
+      "company": "Freeze Carbon GmbH",
+      "location": "Frankfurt, Deutschland",
+      "start": "Jul 2022",
+      "end": "Mai 2025"
+    },
+    {
+      "title": "Softwareentwickler",
+      "company": "Konstech",
+      "location": "Konstanz, Deutschland",
+      "start": "Mär 2022",
+      "end": "Mai 2023"
+    },
+    {
+      "title": "Fullstack-Entwickler (Remote)",
+      "company": "Cresta AI",
+      "location": "San Francisco, Vereinigte Staaten",
+      "start": "Nov 2019",
+      "end": "Mär 2022"
+    },
+    {
+      "title": "Fullstack-Entwickler — MERN",
+      "company": "Hashlogics",
+      "location": "Lahore, Pakistan",
+      "start": "Jul 2018",
+      "end": "Jul 2019"
+    }
+  ],
+  "education": {
+    "degree": "Bachelor of Computer Engineering",
+    "university": "National University of Sciences and Technology (NUST)",
+    "website": "https://nust.edu.pk/"
+  },
+  "languages": {
+    "Punjabi": { "level": "Muttersprache" },
+    "Urdu": { "level": "Muttersprache" },
+    "English": {
+      "listening": "C1",
+      "reading": "B2",
+      "spokenProduction": "C1",
+      "spokenInteraction": "C1",
+      "writing": "B2"
+    },
+    "German": {
+      "listening": "B1",
+      "reading": "A2",
+      "spokenProduction": "A2",
+      "spokenInteraction": "B1",
+      "writing": "B1"
+    }
+  },
+  "interests": ["Laufen", "Wandern", "Tischtennis", "Geselligkeit", "Filme & Serien"]
+}

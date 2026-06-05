@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "lang": "en",
+    "title": "Abdul Azeem — Sr. Software Engineer",
+    "description": "Fullstack Software Engineer based in Germany. TypeScript, React, Python, GCP, AI integrations."
+  },
+  "nav": {
+    "experience": "Experience",
+    "skills": "Skills",
+    "education": "Education",
+    "languages": "Languages",
+    "contact": "Contact"
+  },
+  "header": {
+    "name": "Abdul Azeem",
+    "tagline": "Sr. Software Engineer",
+    "version": "v6.0.0",
+    "location": "Konstanz, Baden-Württemberg, Germany",
+    "switchLang": "DE"
+  },
+  "sections": {
+    "install": "Install",
+    "installCmd": "npx hire abdulazeem",
+    "about": "About",
+    "aboutText": "Fullstack software engineer with 7+ years of experience building scalable web applications, AI-powered integrations, and cloud-native systems. Currently working on AI products at 1alpha AI in Munich. Previously built carbon credit platforms, real-time coaching systems, and enterprise SaaS products across Germany and the US.",
+    "experience": "Experience",
+    "skills": "Skills",
+    "education": "Education",
+    "languages": "Languages",
+    "interests": "Interests",
+    "contact": "Contact",
+    "repository": "Repository",
+    "homepage": "Homepage",
+    "current": "Current",
+    "present": "Present",
+    "motherTongue": "Mother tongue",
+    "listening": "Listening",
+    "reading": "Reading",
+    "spokenProduction": "Spoken production",
+    "spokenInteraction": "Spoken interaction",
+    "writing": "Writing"
+  },
+  "info": {
+    "name": "Abdul Azeem",
+    "phone": "+49 174 7082325",
+    "email": "azsidhu8@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/abdulazeem1/",
+    "github": "https://github.com/iabdulazeem/",
+    "address": "Konstanz, Baden-Württemberg, Germany"
+  },
+  "skills": [
+    "TypeScript", "JavaScript", "Python", "Go", "HTML", "CSS",
+    "ReactJS", "Django",
+    "LLM APIs", "AI-powered Integrations",
+    "Google Cloud Platform (GCP)", "Docker", "Terraform", "CI/CD",
+    "PostgreSQL", "ORM", "GraphQL",
+    "Event-Driven Architecture", "Material Design"
+  ],
+  "experience": [
+    {
+      "title": "Sr. Software Engineer",
+      "company": "1alpha AI",
+      "location": "Munich, Germany",
+      "start": "Jul 2025",
+      "end": "Present"
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Freeze Carbon GmbH",
+      "location": "Frankfurt, Germany",
+      "start": "Jul 2022",
+      "end": "May 2025"
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Konstech",
+      "location": "Konstanz, Germany",
+      "start": "Mar 2022",
+      "end": "May 2023"
+    },
+    {
+      "title": "Fullstack Engineer (Remote)",
+      "company": "Cresta AI",
+      "location": "San Francisco, United States",
+      "start": "Nov 2019",
+      "end": "Mar 2022"
+    },
+    {
+      "title": "Fullstack Developer — MERN",
+      "company": "Hashlogics",
+      "location": "Lahore, Pakistan",
+      "start": "Jul 2018",
+      "end": "Jul 2019"
+    }
+  ],
+  "education": {
+    "degree": "Bachelor of Computer Engineering",
+    "university": "National University of Sciences and Technology (NUST)",
+    "website": "https://nust.edu.pk/"
+  },
+  "languages": {
+    "Punjabi": { "level": "Mother tongue" },
+    "Urdu": { "level": "Mother tongue" },
+    "English": {
+      "listening": "C1",
+      "reading": "B2",
+      "spokenProduction": "C1",
+      "spokenInteraction": "C1",
+      "writing": "B2"
+    },
+    "German": {
+      "listening": "B1",
+      "reading": "A2",
+      "spokenProduction": "A2",
+      "spokenInteraction": "B1",
+      "writing": "B1"
+    }
+  },
+  "interests": ["Running", "Hiking", "Table Tennis", "Socialising", "Films & TV"]
+}
