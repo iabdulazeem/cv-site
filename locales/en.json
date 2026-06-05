@@ -22,7 +22,7 @@
     "install": "Install",
     "installCmd": "npx hire abdulazeem",
     "about": "About",
-    "aboutText": "Fullstack software engineer with 7+ years of experience building scalable web applications, AI-powered integrations, and cloud-native systems. Currently working on AI products at 1alpha AI in Munich. Previously built carbon credit platforms, real-time coaching systems, and enterprise SaaS products across Germany and the US.",
+    "aboutText": "I'm working as a Software Engineer for more than 7 years, and have delivered some quality code and features in the companies I have worked with. Primarily I worked on ReactJS, React Native, TypeScript, Django, Golang, and GraphQL, but I'm not limited to technologies and languages — I like to get things done, and I love to learn new things in general and new and performant technologies in particular wherever needed to optimize the outcome. Recently, I have also been working with LLM APIs, building AI-powered integrations and applications, and applying prompt engineering to create practical, production-ready solutions.",
     "experience": "Experience",
     "skills": "Skills",
     "education": "Education",
@@ -62,7 +62,7 @@
       "company": "1alpha AI",
       "location": "Munich, Germany",
       "start": "Jul 2025",
-      "end": "Present"
+      "end": "Jun 2026"
     },
     {
       "title": "Software Engineer",

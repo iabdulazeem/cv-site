@@ -28,7 +28,7 @@
   body { font-family: "Fira Mono", "Source Code Pro", Menlo, monospace; background: var(--npm-bg); color: var(--npm-text); line-height: 1.6; font-size: 15px; }
 
   /* ── Top bar (npm-style) ──────────────────────────────── */
-  .topbar { background: var(--npm-red); padding: 0; height: 48px; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; }
+  .topbar { background: var(--npm-red); padding: 0; height: 48px; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; position: sticky; top: 0; z-index: 100; }
   .topbar-left { display: flex; align-items: center; gap: 16px; }
   .topbar-logo { font-size: 20px; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: -0.5px; }
   .topbar-logo span { opacity: 0.7; font-weight: 400; }
@@ -36,7 +36,7 @@
   .lang-switch:hover { background: rgba(255,255,255,0.25); }
 
   /* ── Nav ───────────────────────────────────────────────── */
-  .nav { background: var(--npm-surface); border-bottom: 1px solid var(--npm-border); }
+  .nav { background: var(--npm-surface); border-bottom: 1px solid var(--npm-border); position: sticky; top: 48px; z-index: 99; }
   .nav-inner { max-width: var(--max-w); margin: 0 auto; display: flex; gap: 0; overflow-x: auto; }
   .nav a { padding: 12px 20px; font-size: 14px; color: var(--npm-text2); text-decoration: none; border-bottom: 3px solid transparent; transition: all 0.15s; white-space: nowrap; }
   .nav a:hover, .nav a.active { color: var(--npm-text); border-bottom-color: var(--npm-red); }
@@ -145,12 +145,6 @@
       Konstanz, Baden-Württemberg, Germany
     </p>
 
-    <!-- Install box -->
-    <div class="install-box">
-      <div><span style="color:#999" data-key="sections.install">Install</span>&nbsp;&nbsp;<code id="installCmd">npx hire abdulazeem</code></div>
-      <button class="copy-btn" onclick="navigator.clipboard.writeText('npx hire abdulazeem')">📋</button>
-    </div>
-
     <!-- About -->
     <div class="section" id="about">
       <h2><a class="anchor" href="#about">#</a> <span data-key="sections.about">About</span></h2>
@@ -241,9 +235,13 @@
 const LOCALES = {};
 let currentLang = 'en';
 
+// Resolve base path for GitHub Pages (works both at root and /cv-site/)
+const BASE = document.querySelector('base')?.href || location.pathname.replace(/\/?(en|de)?\/?$/, '/');
+
 async function loadLocale(lang) {
   if (!LOCALES[lang]) {
-    const res = await fetch(`locales/${lang}.json`);
+    const url = new URL(`locales/${lang}.json`, location.href);
+    const res = await fetch(url);
     LOCALES[lang] = await res.json();
   }
   return LOCALES[lang];
@@ -268,9 +266,6 @@ function applyLocale(data) {
   document.getElementById('locationLine').innerHTML =
     `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> ${data.header.location}`;
   document.getElementById('langSwitch').textContent = data.header.switchLang;
-
-  // Install
-  document.getElementById('installCmd').textContent = data.sections.installCmd;
 
   // Experience
   const expHtml = data.experience.map(e => `
@@ -326,8 +321,10 @@ async function setLang(lang) {
   currentLang = lang;
   const data = await loadLocale(lang);
   applyLocale(data);
-  // Update URL hash
-  history.replaceState(null, '', `/${lang}${location.search}`);
+  // Update URL with lang query param (works on any host)
+  const url = new URL(location.href);
+  url.searchParams.set('lang', lang);
+  history.replaceState(null, '', url);
 }
 
 function toggleLang() {
@@ -336,9 +333,8 @@ function toggleLang() {
 
 // Init
 (async () => {
-  // Detect lang from URL path
-  const path = location.pathname;
-  const lang = path.includes('/de') ? 'de' : 'en';
+  const params = new URLSearchParams(location.search);
+  const lang = params.get('lang') || (location.pathname.includes('/de') ? 'de' : 'en');
   await setLang(lang);
 })();
 </script>

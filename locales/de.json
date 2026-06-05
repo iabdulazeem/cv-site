@@ -22,7 +22,7 @@
     "install": "Installieren",
     "installCmd": "npx hire abdulazeem",
     "about": "Über mich",
-    "aboutText": "Fullstack-Softwareentwickler mit über 7 Jahren Erfahrung in der Entwicklung skalierbarer Webanwendungen, KI-gestützter Integrationen und cloudnativer Systeme. Derzeit an KI-Produkten bei 1alpha AI in München tätig. Zuvor Carbon-Credit-Plattformen, Echtzeit-Coaching-Systeme und Enterprise-SaaS-Produkte in Deutschland und den USA entwickelt.",
+    "aboutText": "Ich arbeite seit mehr als 7 Jahren als Softwareentwickler und habe in den Unternehmen, in denen ich gearbeitet habe, qualitativ hochwertigen Code und Features geliefert. Hauptsächlich habe ich mit ReactJS, React Native, TypeScript, Django, Golang und GraphQL gearbeitet, bin aber nicht auf bestimmte Technologien und Sprachen beschränkt — ich bringe Dinge zum Abschluss und lerne gerne Neues, insbesondere neue und performante Technologien, wo sie gebraucht werden. Kürzlich habe ich auch mit LLM-APIs gearbeitet, KI-gestützte Integrationen und Anwendungen gebaut und Prompt Engineering für praxisnahe, produktionsreife Lösungen eingesetzt.",
     "experience": "Erfahrung",
     "skills": "Kenntnisse",
     "education": "Ausbildung",
@@ -62,7 +62,7 @@
       "company": "1alpha AI",
       "location": "München, Deutschland",
       "start": "Jul 2025",
-      "end": "Aktuell"
+      "end": "Jun 2026"
     },
     {
       "title": "Softwareentwickler",
