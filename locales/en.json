@@ -99,8 +99,6 @@
     "website": "https://nust.edu.pk/"
   },
   "languages": {
-    "Punjabi": { "level": "Mother tongue" },
-    "Urdu": { "level": "Mother tongue" },
     "English": {
       "listening": "C1",
       "reading": "B2",
@@ -114,7 +112,9 @@
       "spokenProduction": "A2",
       "spokenInteraction": "B1",
       "writing": "B1"
-    }
+    },
+    "Punjabi": { "level": "Mother tongue" },
+    "Urdu": { "level": "Mother tongue" }
   },
   "interests": ["Running", "Hiking", "Table Tennis", "Socialising", "Films & TV"]
 }

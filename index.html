@@ -24,6 +24,24 @@
     --max-w: 1140px;
   }
 
+  [data-theme="dark"] {
+    --npm-bg: #1a1a2e;
+    --npm-surface: #16213e;
+    --npm-border: #2a2a4a;
+    --npm-text: #e0e0e0;
+    --npm-text2: #a0a0b8;
+    --npm-text3: #707090;
+    --npm-link: #6cb4ee;
+    --npm-tag-bg: #2a2a4a;
+    --npm-sidebar-bg: #16213e;
+    --npm-code-bg: #0f0f23;
+    --npm-code-text: #b0b8d0;
+  }
+  [data-theme="dark"] .level-native { background: #1b3a1b; color: #6fcf6f; }
+  [data-theme="dark"] .level-c { background: #1a2e4a; color: #6cb4ee; }
+  [data-theme="dark"] .level-b { background: #3a2a10; color: #e0a040; }
+  [data-theme="dark"] .level-a { background: #3a1a1a; color: #e06060; }
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: "Fira Mono", "Source Code Pro", Menlo, monospace; background: var(--npm-bg); color: var(--npm-text); line-height: 1.6; font-size: 15px; }
 
@@ -125,7 +143,10 @@
   <div class="topbar-left">
     <a class="topbar-logo" href="#">aa <span>/ cv</span></a>
   </div>
-  <button class="lang-switch" id="langSwitch" onclick="toggleLang()">DE</button>
+  <div style="display:flex;align-items:center;gap:10px">
+    <button class="lang-switch" id="themeSwitch" onclick="toggleTheme()" title="Toggle dark mode">☀️</button>
+    <button class="lang-switch" id="langSwitch" onclick="toggleLang()">DE</button>
+  </div>
 </div>
 
 <!-- Nav -->
@@ -337,8 +358,22 @@ function toggleLang() {
   setLang(currentLang === 'en' ? 'de' : 'en');
 }
 
+// Theme toggle
+function toggleTheme() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  document.getElementById('themeSwitch').textContent = next === 'dark' ? '🌙' : '☀️';
+  localStorage.setItem('theme', next);
+}
+
 // Init
 (async () => {
+  // Restore theme
+  const saved = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', saved);
+  document.getElementById('themeSwitch').textContent = saved === 'dark' ? '🌙' : '☀️';
+
   const params = new URLSearchParams(location.search);
   const lang = params.get('lang') || (location.pathname.includes('/de') ? 'de' : 'en');
   await setLang(lang);
