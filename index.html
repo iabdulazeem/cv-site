@@ -43,7 +43,9 @@
   [data-theme="dark"] .level-a { background: #3a1a1a; color: #e06060; }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body { font-family: "Fira Mono", "Source Code Pro", Menlo, monospace; background: var(--npm-bg); color: var(--npm-text); line-height: 1.6; font-size: 15px; }
+  .section, .sidebar { scroll-margin-top: 100px; }
 
   /* ── Top bar (npm-style) ──────────────────────────────── */
   .topbar { background: var(--npm-red); padding: 0; height: 48px; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; position: sticky; top: 0; z-index: 100; }
@@ -152,10 +154,10 @@
 <!-- Nav -->
 <div class="nav">
   <div class="nav-inner" id="navLinks">
-    <a href="#about" class="active" data-key="nav.experience">Experience</a>
+    <a href="#about" data-key="nav.about">About</a>
+    <a href="#experience" data-key="nav.experience">Experience</a>
     <a href="#skills" data-key="nav.skills">Skills</a>
     <a href="#education" data-key="nav.education">Education</a>
-    <a href="#languages" data-key="nav.languages">Languages</a>
     <a href="#contact" data-key="nav.contact">Contact</a>
   </div>
 </div>

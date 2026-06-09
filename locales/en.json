@@ -5,10 +5,10 @@
     "description": "Fullstack Software Engineer based in Germany. TypeScript, React, Python, GCP, AI integrations."
   },
   "nav": {
+    "about": "About",
     "experience": "Experience",
     "skills": "Skills",
     "education": "Education",
-    "languages": "Languages",
     "contact": "Contact"
   },
   "header": {

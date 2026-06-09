@@ -5,10 +5,10 @@
     "description": "Fullstack-Softwareentwickler in Deutschland. TypeScript, React, Python, GCP, KI-Integrationen."
   },
   "nav": {
+    "about": "Über mich",
     "experience": "Erfahrung",
     "skills": "Kenntnisse",
     "education": "Ausbildung",
-    "languages": "Sprachen",
     "contact": "Kontakt"
   },
   "header": {
