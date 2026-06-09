@@ -32,7 +32,7 @@
     "aboutCanLabel": "Was ich mitbringe",
     "aboutCan": [
       "End-to-End-Produktentwicklung: Architektur, Implementierung, Testing, Deployment und Monitoring",
-      "Agentic Software Engineering — LLM-APIs, KI-Agenten und Prompt Engineering nutzen, um schneller zu entwickeln, zu testen und auszuliefern",
+      "Agentic Software Engineering — autonome KI-Systeme mit Validierungsschleifen, strikten Constraints und Kontext konfigurieren, um Code mit minimalem manuellen Eingriff zu erstellen, zu testen und zu warten",
       "Moderne Softwarepraktiken: CI/CD, Infrastructure-as-Code, Event-Driven-Systeme und effiziente Feedback-Loops",
       "Anpassungsfähig an neue Bereiche — Digitalisierung, Business-Anwendungen, hybride KI+Software-Systeme, Automatisierung"
     ],

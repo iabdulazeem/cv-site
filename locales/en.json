@@ -32,7 +32,7 @@
     "aboutCanLabel": "What I bring to the table",
     "aboutCan": [
       "End-to-end product delivery: architecture, implementation, testing, deployment, and monitoring",
-      "Agentic software engineering — leveraging LLM APIs, AI agents, and prompt engineering to write, test, and ship code faster",
+      "Agentic software engineering — configuring autonomous AI systems with validation loops, strict constraints, and context to build, test, and maintain code with minimal manual intervention",
       "Modern software practices: CI/CD, infrastructure-as-code, event-driven systems, and efficient feedback loops",
       "Adaptable to new domains — digitalisation, business applications, hybrid AI+software systems, automation"
     ],
