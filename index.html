@@ -175,7 +175,7 @@
     <!-- About -->
     <div class="section" id="about">
       <h2><a class="anchor" href="#about">#</a> <span data-key="sections.about">About</span></h2>
-      <p data-key="sections.aboutText">Fullstack software engineer with 7+ years of experience…</p>
+      <div id="aboutContent"></div>
     </div>
 
     <!-- Experience -->
@@ -293,6 +293,17 @@ function applyLocale(data) {
   document.getElementById('locationLine').innerHTML =
     `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> ${data.header.location}`;
   document.getElementById('langSwitch').textContent = data.header.switchLang;
+
+  // About (bullet lists)
+  document.getElementById('aboutContent').innerHTML = `
+    <p style="font-size:14px;color:var(--npm-text2);margin-bottom:12px;font-weight:600">${data.sections.aboutDoneLabel}</p>
+    <ul style="margin:0 0 18px 20px;color:var(--npm-text2);font-size:14px;line-height:1.8">
+      ${data.sections.aboutDone.map(b => `<li>${b}</li>`).join('')}
+    </ul>
+    <p style="font-size:14px;color:var(--npm-text2);margin-bottom:12px;font-weight:600">${data.sections.aboutCanLabel}</p>
+    <ul style="margin:0 0 0 20px;color:var(--npm-text2);font-size:14px;line-height:1.8">
+      ${data.sections.aboutCan.map(b => `<li>${b}</li>`).join('')}
+    </ul>`;
 
   // Experience
   const expHtml = data.experience.map(e => `

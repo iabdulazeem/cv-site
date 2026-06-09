@@ -22,7 +22,20 @@
     "install": "Installieren",
     "installCmd": "npx hire abdulazeem",
     "about": "Über mich",
-    "aboutText": "Ich arbeite seit mehr als 7 Jahren als Softwareentwickler und habe in den Unternehmen, in denen ich gearbeitet habe, qualitativ hochwertigen Code und Features geliefert. Hauptsächlich habe ich mit ReactJS, React Native, TypeScript, Django, Golang und GraphQL gearbeitet, bin aber nicht auf bestimmte Technologien und Sprachen beschränkt — ich bringe Dinge zum Abschluss und lerne gerne Neues, insbesondere neue und performante Technologien, wo sie gebraucht werden. Kürzlich habe ich auch mit LLM-APIs gearbeitet, KI-gestützte Integrationen und Anwendungen gebaut und Prompt Engineering für praxisnahe, produktionsreife Lösungen eingesetzt.",
+    "aboutDoneLabel": "Was ich bisher geliefert habe",
+    "aboutDone": [
+      "7+ Jahre Erfahrung in der Entwicklung produktionsreifer Software – in Startups, Scale-ups und größeren Unternehmen",
+      "B2B-Plattformen, Authentifizierung, Zahlungsintegrationen, E-Commerce und OTT-Streaming-Produkte gebaut",
+      "Fullstack-Arbeit mit React, React Native, TypeScript, Django, Go, GraphQL und PostgreSQL",
+      "Nicht auf bestimmte Technologien beschränkt — ich wähle, was das Problem am besten löst"
+    ],
+    "aboutCanLabel": "Was ich mitbringe",
+    "aboutCan": [
+      "End-to-End-Produktentwicklung: Architektur, Implementierung, Testing, Deployment und Monitoring",
+      "KI-gestütztes Engineering — LLM-APIs, KI-Agenten und Prompt Engineering zur Beschleunigung der Entwicklung und Qualitätsautomatisierung",
+      "Moderne Softwarepraktiken: CI/CD, Infrastructure-as-Code, Event-Driven-Systeme und effiziente Feedback-Loops",
+      "Anpassungsfähig an neue Bereiche — Digitalisierung, Business-Anwendungen, hybride KI+Software-Systeme, Automatisierung"
+    ],
     "experience": "Erfahrung",
     "skills": "Kenntnisse",
     "education": "Ausbildung",
