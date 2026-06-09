@@ -106,6 +106,14 @@
   .github-heatmap img { width: 100%; max-width: 720px; border-radius: 6px; }
   [data-theme="dark"] .github-heatmap img { filter: invert(1) hue-rotate(180deg) brightness(1.1); }
 
+  /* Testimonials */
+  .testimonials { display: flex; flex-direction: column; gap: 16px; }
+  .testimonial { border-left: 3px solid var(--npm-red); padding: 12px 16px; background: var(--npm-surface); border-radius: 0 6px 6px 0; }
+  .testimonial blockquote { font-size: 14px; color: var(--npm-text2); line-height: 1.6; font-style: italic; margin: 0; }
+  .testimonial .attribution { margin-top: 8px; font-size: 13px; font-style: normal; }
+  .testimonial .attribution strong { color: var(--npm-text); }
+  .testimonial .attribution span { color: var(--npm-text3); }
+
   /* Languages table */
   .lang-table { width: 100%; border-collapse: collapse; font-size: 13px; }
   .lang-table th, .lang-table td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--npm-border); }
@@ -214,6 +222,12 @@
       <div class="github-heatmap">
         <img id="ghChart" src="https://ghchart.rshah.org/cb3837/iabdulazeem" alt="GitHub contribution chart" loading="lazy">
       </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="section" id="testimonials">
+      <h2><a class="anchor" href="#testimonials">#</a> <span data-key="sections.testimonials">Testimonials</span></h2>
+      <div class="testimonials" id="testimonialList"></div>
     </div>
 
     <!-- Education -->
@@ -347,6 +361,17 @@ function applyLocale(data) {
   // How I Work
   document.getElementById('howIWorkList').innerHTML =
     data.sections.howIWorkItems.map(b => `<li>${b}</li>`).join('');
+
+  // Testimonials
+  document.getElementById('testimonialList').innerHTML =
+    data.testimonials.map(t => `
+      <div class="testimonial">
+        <blockquote>"${t.quote}"</blockquote>
+        <div class="attribution">
+          <strong><a href="${t.url}" target="_blank" rel="noopener" style="color:var(--npm-link);text-decoration:none">${t.name}</a></strong>
+          <span> · ${t.relation}</span>
+        </div>
+      </div>`).join('');
 
   // Education
   document.getElementById('eduContent').innerHTML = `

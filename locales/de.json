@@ -47,6 +47,7 @@
       "Den Prozess an die Projektgröße anpassen: leichtgewichtig für kleine Builds, volle Governance für Plattformen"
     ],
     "githubActivity": "GitHub-Aktivität",
+    "testimonials": "Empfehlungen",
     "education": "Ausbildung",
     "languages": "Sprachen",
     "interests": "Interessen",
@@ -138,5 +139,28 @@
     "Punjabi": { "level": "Muttersprache" },
     "Urdu": { "level": "Muttersprache" }
   },
+  "testimonials": [
+    {
+      "quote": "Er hat unser Tech-Team maßgeblich aufgebaut und dabei sowohl eine Junior-Kollegin als auch Freelancer geleitet. Seine Full-Stack-Kompetenzen waren beeindruckend — insbesondere die reibungslose Integration von Stripe in unseren B2B-Marktplatz. Er übernimmt Verantwortung, liefert qualitativ hochwertige Ergebnisse und lernt schnell Neues. Ich empfehle ihn uneingeschränkt.",
+      "name": "Thorsten Ratzlaff",
+      "title": "Energy Transition in Europe",
+      "relation": "Direkter Vorgesetzter bei Freeze Carbon",
+      "url": "https://www.linkedin.com/in/thorsten-ratzlaff/"
+    },
+    {
+      "quote": "Was ihn auszeichnet, ist sein systematischer Ansatz bei der Problemlösung. Er hat durchgehend qualitativ hochwertigen Code und Features geliefert. Er hat großartige Kommunikationsfähigkeiten, ist ein echter Teamplayer und verbessert sich ständig.",
+      "name": "Yasser Zubair",
+      "title": "Senior Engineer",
+      "relation": "Direkter Vorgesetzter bei StarzPlay (OTT)",
+      "url": "https://www.linkedin.com/in/yasser-zubair-ab1ab2b1/"
+    },
+    {
+      "quote": "Er meldet sich immer freiwillig für mehr Verantwortung und übernimmt sie. Seine innovative Denkweise, die Fähigkeit im Team zusammenzuarbeiten und seine außergewöhnlichen Kommunikationsfähigkeiten machen ihn zu einer potenziellen Führungskraft.",
+      "name": "Lareb Syed",
+      "title": "Fullstack-Softwareentwickler & Architekt",
+      "relation": "Direkter Vorgesetzter bei Cresta AI",
+      "url": "https://www.linkedin.com/in/larebsyed/"
+    }
+  ],
   "interests": ["Laufen", "Wandern", "Tischtennis", "Geselligkeit", "Filme & Serien"]
 }

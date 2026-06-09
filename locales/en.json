@@ -47,6 +47,7 @@
       "Scale the process to the project: lightweight for small builds, full governance for platforms"
     ],
     "githubActivity": "GitHub Activity",
+    "testimonials": "Testimonials",
     "education": "Education",
     "languages": "Languages",
     "interests": "Interests",
@@ -138,5 +139,28 @@
     "Punjabi": { "level": "Mother tongue" },
     "Urdu": { "level": "Mother tongue" }
   },
+  "testimonials": [
+    {
+      "quote": "He built up our tech team, leading both a junior colleague and freelancers. His full-stack skills were impressive — especially the seamless Stripe integration into our B2B marketplace. He takes ownership, delivers high-quality results, and picks up new things fast. I recommend him without reservation.",
+      "name": "Thorsten Ratzlaff",
+      "title": "Energy Transition in Europe",
+      "relation": "Direct manager at Freeze Carbon",
+      "url": "https://www.linkedin.com/in/thorsten-ratzlaff/"
+    },
+    {
+      "quote": "What makes him stand out is his systematic approach to the problem at hand. He consistently delivered quality code and features. He has great communication skills, is a true team player, and constantly pushes himself to improve.",
+      "name": "Yasser Zubair",
+      "title": "Senior Engineer",
+      "relation": "Direct manager at StarzPlay (OTT)",
+      "url": "https://www.linkedin.com/in/yasser-zubair-ab1ab2b1/"
+    },
+    {
+      "quote": "He always volunteers for more responsibilities and owns them. His innovative mindset, ability to work cohesively with the team, and extraordinary communication skills make him a good potential leader.",
+      "name": "Lareb Syed",
+      "title": "Fullstack Software Engineer & Architect",
+      "relation": "Direct manager at Cresta AI",
+      "url": "https://www.linkedin.com/in/larebsyed/"
+    }
+  ],
   "interests": ["Running", "Hiking", "Table Tennis", "Socialising", "Films & TV"]
 }
