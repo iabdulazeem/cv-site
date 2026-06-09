@@ -96,6 +96,16 @@
   .exp-company { color: var(--npm-link); font-size: 14px; }
   .exp-meta { font-size: 13px; color: var(--npm-text3); margin-top: 2px; }
 
+  /* How I Work */
+  .work-approach { margin: 0 0 0 20px; list-style: none; }
+  .work-approach li { padding: 6px 0; font-size: 14px; color: var(--npm-text2); line-height: 1.6; position: relative; padding-left: 20px; }
+  .work-approach li::before { content: "▸"; position: absolute; left: 0; color: var(--npm-red); font-weight: 700; }
+
+  /* GitHub heatmap */
+  .github-heatmap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .github-heatmap img { width: 100%; max-width: 720px; border-radius: 6px; }
+  [data-theme="dark"] .github-heatmap img { filter: invert(1) hue-rotate(180deg) brightness(1.1); }
+
   /* Languages table */
   .lang-table { width: 100%; border-collapse: collapse; font-size: 13px; }
   .lang-table th, .lang-table td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--npm-border); }
@@ -190,6 +200,20 @@
     <div class="section" id="skills">
       <h2><a class="anchor" href="#skills">#</a> <span data-key="sections.skills">Skills</span></h2>
       <div class="tags" id="skillTags"></div>
+    </div>
+
+    <!-- How I Work -->
+    <div class="section" id="how-i-work">
+      <h2><a class="anchor" href="#how-i-work">#</a> <span data-key="sections.howIWork">How I Work</span></h2>
+      <ul class="work-approach" id="howIWorkList"></ul>
+    </div>
+
+    <!-- GitHub Activity -->
+    <div class="section" id="github-activity">
+      <h2><a class="anchor" href="#github-activity">#</a> <span data-key="sections.githubActivity">GitHub Activity</span></h2>
+      <div class="github-heatmap">
+        <img id="ghChart" src="https://ghchart.rshah.org/cb3837/iabdulazeem" alt="GitHub contribution chart" loading="lazy">
+      </div>
     </div>
 
     <!-- Education -->
@@ -319,6 +343,10 @@ function applyLocale(data) {
   // Skills
   document.getElementById('skillTags').innerHTML =
     data.skills.map(s => `<span class="tag">${s}</span>`).join('');
+
+  // How I Work
+  document.getElementById('howIWorkList').innerHTML =
+    data.sections.howIWorkItems.map(b => `<li>${b}</li>`).join('');
 
   // Education
   document.getElementById('eduContent').innerHTML = `

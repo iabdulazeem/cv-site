@@ -38,6 +38,15 @@
     ],
     "experience": "Experience",
     "skills": "Skills",
+    "howIWork": "How I Work",
+    "howIWorkItems": [
+      "Define the problem and acceptance criteria before writing any code",
+      "Use AI agents with strict constraints, validation loops, and architecture guardrails — not conversational prompting",
+      "Ship incrementally: working software first, then iterate with automated feedback",
+      "Every feature ships with tests, type safety, and CI/CD — no exceptions",
+      "Scale the process to the project: lightweight for small builds, full governance for platforms"
+    ],
+    "githubActivity": "GitHub Activity",
     "education": "Education",
     "languages": "Languages",
     "interests": "Interests",

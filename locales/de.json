@@ -38,6 +38,15 @@
     ],
     "experience": "Erfahrung",
     "skills": "Kenntnisse",
+    "howIWork": "Wie ich arbeite",
+    "howIWorkItems": [
+      "Problem und Akzeptanzkriterien definieren, bevor Code geschrieben wird",
+      "KI-Agenten mit strikten Constraints, Validierungsschleifen und Architektur-Leitplanken einsetzen — kein Vibe-Coding",
+      "Inkrementell liefern: erst funktionierende Software, dann mit automatisiertem Feedback iterieren",
+      "Jedes Feature wird mit Tests, Typsicherheit und CI/CD ausgeliefert — ohne Ausnahme",
+      "Den Prozess an die Projektgröße anpassen: leichtgewichtig für kleine Builds, volle Governance für Plattformen"
+    ],
+    "githubActivity": "GitHub-Aktivität",
     "education": "Ausbildung",
     "languages": "Sprachen",
     "interests": "Interessen",
